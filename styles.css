@@ -1,0 +1,162 @@
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    /* ### Neutral */
+
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Very-Light-Gray);
+    /* - Weights: 200, 400, 600 */
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: .1rem;
+
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 2rem;
+    color: var(--Grayish-Blue);
+    margin: 0;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--Very-Dark-Blue);
+    margin: 0;
+    text-align: center;
+}
+
+.heading>p {
+    font-weight: 400;
+    color: var(--Grayish-Blue);
+    margin: 0;
+    padding-top: 1rem;
+    text-align: center;
+    width: 35vw;
+    line-height: 1.5rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 6rem 6rem 6rem;
+}
+
+.card {
+    border-radius: .2rem;
+    /* box-shadow: 0.1rem 0.1rem 1rem 0 hsla(229, 6%, 66%, 0.5); */
+    box-shadow: 0.1rem 0.1rem 2rem 0 hsla(212, 86%, 64%, .2);
+    padding: 2rem;
+    background-color: white;
+    gap: 2rem;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.supervisor {
+    border-top: 4px solid var(--Cyan);
+}
+
+.team {
+    border-top: 4px solid var(--Red);
+}
+
+.karma {
+    border-top: 4px solid var(--Orange);
+}
+
+.calculator {
+    border-top: 4px solid var(--Blue);
+}
+
+.card>p {
+    font-weight: 200;
+    color: var(--Grayish-Blue);
+    margin: 0;
+    font-size: 1rem;
+    background-color: white;
+    padding: 1rem 2rem 1rem 0;
+    line-height: 2rem;
+
+}
+
+.card>h3 {
+    color: var(--Very-Dark-Blue);
+    font-size: 1.5rem;
+    margin: 0;
+    background-color: white;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 1rem;
+    background-color: white;
+}
+
+img {
+    background-color: white;
+}
+
+@media screen and (max-width: 550px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .card {
+        flex: 1;
+    }
+
+    .card>p {
+        padding: 1rem 1rem 1rem 0;
+    }
+
+    .heading {
+        gap: 0.5rem;
+        padding: 4rem 2rem;
+    }
+
+    .heading>p {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
